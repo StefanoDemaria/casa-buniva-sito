@@ -238,8 +238,11 @@ img{max-width:100%;display:block;}
   gap:14px;
 }
 .gallery-grid .photo-frame{aspect-ratio:4/5;}
-@media (max-width:600px){
-  .gallery-grid{gap:8px;}
+@media (max-width:700px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .gallery-grid .photo-frame:nth-child(1){grid-column:span 2;aspect-ratio:4/3;}
+  .gallery-grid .photo-frame:nth-child(2),
+  .gallery-grid .photo-frame:nth-child(3){aspect-ratio:1/1;}
 }
 
 /* ---------- MENU ---------- */
